@@ -40,5 +40,4 @@ static char	*word_make(const char	*s, int	start, int	len)
 }
 //char	**ft_split(const char	*s, char	c);
 //{
-//	int	i;
 //}
