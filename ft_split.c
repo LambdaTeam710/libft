@@ -31,7 +31,7 @@ static int	word_len(const char	*s, char	c)
 	return (len);
 }
 
-static void	split_free(char	**array, int	created_count)
+static void	*split_free(char	**array, int	created_count)
 {
 	while (created_count > 0)
 	{
@@ -39,6 +39,7 @@ static void	split_free(char	**array, int	created_count)
 		created_count--;
 	}
 	free(array);
+	return (NULL);
 }
 
 static char	**array_fill(char	**array, const char *s, char c)
@@ -46,7 +47,6 @@ static char	**array_fill(char	**array, const char *s, char c)
 	int	i;
 	int	wi;
 	int	length;
-	char	*new;
 
 	i = 0;
 	wi = 0;
@@ -57,13 +57,9 @@ static char	**array_fill(char	**array, const char *s, char c)
 		else
 		{
 			length = word_len(s + i, c);
-			new = ft_substr(s, i, length);
-			if (!new)
-			{
-				split_free(array, wi);
-				return (NULL);
-			}
-			array[wi] = new;
+			array[wi] = ft_substr(s, i, length);
+			if (!array[wi])
+				return (split_free(array, wi));
 			wi++;
 			i = i + length;
 		}
@@ -71,6 +67,7 @@ static char	**array_fill(char	**array, const char *s, char c)
 	array[wi] = NULL;
 	return (array);
 }
+
 char	**ft_split(const char	*s, char	c)
 {
 	char **array;
