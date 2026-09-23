@@ -2,7 +2,7 @@
 
 ```text
 ┌────────────────────────────────────────────┐
-│ λ LambdaTeam710                            │
+│ λ By: Oussama_ES-SλIDY - LambdaTeam710     │
 │ self-taught C / systems engineer           │
 └────────────────────────────────────────────┘
 ```
