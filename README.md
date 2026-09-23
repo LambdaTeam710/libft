@@ -35,7 +35,7 @@ For me, this was not just a school project. It was the project where C finally b
 
 ## Background
 
-I am self-taught and a 1337 pool survivor for the 2025/2026 pool.
+I am self-taught and a 1337 (42 Morocco) piscine survivor for the 2025/2026 pool.
 
 After the 2026 pool did not go my way, I did not stop. I kept learning alone, reading, testing, failing, and rebuilding until things started to make sense.
 
